@@ -22,3 +22,24 @@ calculate percentage by counter / lenght
 print ouput to user
 """
 
+def main():
+    grades = {78, 67, 56, 99, 80, 83, 82, 91, 94, 95, 77, 88, 85, 92, 91, 79, 88, 82, 81, 86, 94, 93, 92, 45}
+    calculate_percentage_above_average(grades)
+
+def calculate_percentage_above_average(grades):
+    length = len(grades)
+    sum1 = sum(grades)
+    avg = sum1 / length
+    print("Number of Grades:", length)
+    print("Average Grade:", avg)
+    counter = 0
+    for item in grades:
+        is item > avg:
+        counter += 1
+    PercentHigher = counter / length
+    print("Percent of grades above average:", end = " ")
+    print("{0:.2}".format(PercentHigher))
+
+main()
+
+
